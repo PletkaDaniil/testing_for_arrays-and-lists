@@ -6,14 +6,24 @@ TEST(ArrayTest, ArrayCreate) { // При создании массива его 
 	ASSERT_EQ(a.getSize(), 0) << "Size of empty array should be 0";
 }
 
+TEST(ArrayTest, ArraySetElem) { // Проверяем замену элементов
+	Arry a;
+	a.addElement(5);
+	a.addElement(6);
+	a.addElement(19);
+	a.addElement(18);
+	a.setElement(1, 4);
+	//EXPECT_EQ(a.getElement(0), 7);
+	ASSERT_EQ(a.getElement(1), 4);
+	//ASSERT_EQ(a.getElement(2), 7);
+}
+
 TEST(ArrayTest, ArrayAddElem) { // Проверяем добавление элемента
 	Arry a;
 	a.addElement(42);
 	ASSERT_EQ(a.getSize(), 1);
 	ASSERT_EQ(a.getElement(0), 42);
 }
-
-
 
 int main(int argc, char* argv[]) {
 	::testing::InitGoogleTest(&argc, argv);
