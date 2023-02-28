@@ -1,3 +1,26 @@
+#include <gtest/gtest.h>
+#include "arry.h"
+
+TEST(ArrayTest, ArrayCreate) { // При создании массива его размер должен быть нулевым
+	Arry a;
+	ASSERT_EQ(a.getSize(), 0) << "Size of empty array should be 0";
+}
+
+TEST(ArrayTest, ArrayAddElem) { // Проверяем добавление элемента
+	Arry a;
+	a.addElement(42);
+	ASSERT_EQ(a.getSize(), 1);
+	ASSERT_EQ(a.getElement(0), 42);
+}
+
+
+
+int main(int argc, char* argv[]) {
+	::testing::InitGoogleTest(&argc, argv);
+	return RUN_ALL_TESTS();
+}
+
+/*
 #include <iostream>
 #include <fstream>
 #include "arry.h"
@@ -42,3 +65,4 @@ int main() {
 	std::cout << "testArrySetElem " << (testArrySettingTheElem() ? "OK" : "FAIL") << std::endl;
 	return 0;
 }
+*/
