@@ -14,7 +14,7 @@ TEST(ArrayTest, ArraySetElem) { // Проверяем замену элемен�
 	a.addElement(18);
 	a.setElement(1, 4);
 	//EXPECT_EQ(a.getElement(0), 7);
-	ASSERT_EQ(a.getElement(1), 4);
+	ASSERT_EQ(a.getElement(1), 5);
 	//ASSERT_EQ(a.getElement(2), 7);
 }
 
